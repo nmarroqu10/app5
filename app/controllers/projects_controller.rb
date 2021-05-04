@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+ 
   before_action :set_project, only: %i[ show edit update destroy ]
 
   # GET /projects or /projects.json
@@ -12,7 +13,11 @@ class ProjectsController < ApplicationController
 
   # GET /projects/new
   def new
-    @project = Project.new
+    if user_signed_in?
+      @project = Project.new
+    else
+      redirect_to new_user_session_path
+    end
   end
 
   # GET /projects/1/edit

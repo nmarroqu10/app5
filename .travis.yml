@@ -1,3 +1,4 @@
+
 language: ruby
 cache: bundler
 bundler_args: --without production
@@ -10,3 +11,11 @@ before_install:
 
 script:
  - bundle exec rspec
+ 
+deploy:
+ provider: heroku
+ api_key: 16e273c3-db92-4543-b94a-1cd9318cfa98
+ app: pure-cove-26768
+ run: "rake db:migrate"
+ on:
+  all_branches: true

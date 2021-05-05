@@ -20,11 +20,8 @@ pre {
 }
 
 a {
-  color: #000;
-
-  &:visited {
-    color: #666;
-  }
+  font-size:small;
+  color: rgb(32, 9, 243);
 
   &:hover {
     color: #fff;
@@ -33,6 +30,7 @@ a {
 }
 
 th {
+  font-size: small;
   padding-bottom: 5px;
 }
 

@@ -22,6 +22,11 @@ class ProjectsController < ApplicationController
 
   # GET /projects/1/edit
   def edit
+    if user_signed_in?
+    
+    else 
+      redirect_to new_user_session_path
+    end
   end
 
   # POST /projects or /projects.json
@@ -54,10 +59,14 @@ class ProjectsController < ApplicationController
 
   # DELETE /projects/1 or /projects/1.json
   def destroy
-    @project.destroy
-    respond_to do |format|
-      format.html { redirect_to projects_url, notice: "Project was successfully destroyed." }
-      format.json { head :no_content }
+    if user_signed_in?
+      @project.destroy
+      respond_to do |format|
+        format.html { redirect_to projects_url, notice: "Project was successfully destroyed." }
+        format.json { head :no_content }
+      end
+    else
+      redirect_to new_user_session_path
     end
   end
 

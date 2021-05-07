@@ -1,5 +1,16 @@
-<h1>New Project</h1>
+<div class="card">
 
-<%= render 'form', project: @project %>
+    <div class="card-header">
+        <h2>New Project</h2>
+    </div>
 
-<%= link_to 'Back', projects_path %>
+    
+    <%= render 'form', project: @project %>
+    
+    
+
+    <div class="card-footer">
+        <td><%= link_to 'Back', projects_path, class: 'btn btn-primary' %></td>
+    </div>
+
+</div>

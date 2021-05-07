@@ -1,14 +1,23 @@
 
-
-<div class="card">
-  <div class="card-header">
-    <h2 class='card-title d-flex justify-content-between mb-4'>
-      <span>Projects</span>
-      <%= link_to 'New Project', new_project_path, class: 'btn btn-primary' %>
-    </h2>
+  <div class="p-5 text-center bg-white">
+    <h4 class="mb-3">
+        Hello, welcome to my projects website.
+        <br>Here are all of my Projects!</br>
+        Thank you for visiting.
+    </h4>
   </div>
-  <div card="card-body">
+<div class="card">
+  
+  <div class="card-header">
+    
+    <h2 class='card-title justify-content-between mb-4'>
+      Projects
+    </h2>
 
+  
+  </div>
+  
+  <div class="card-body">
     <table style="width:35%;">
       <thead>
         <tr>
@@ -30,8 +39,12 @@
           </tr>
         <% end %>
       </tbody>
-    </table>
+    </table> 
   </div>
+  
+  <div class="card-footer">
+    <td style="height:1000px"><%= link_to 'New Project', new_project_path, class: 'btn btn-primary' %></td>
+  </div> 
 </div>
 
 

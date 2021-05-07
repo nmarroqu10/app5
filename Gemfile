@@ -29,10 +29,13 @@ gem 'mini_racer'
 gem 'simplecov', require: false
 gem 'devise'
 
+gem 'bootstrap', '~> 4.6.0'
+
 group :production do
   gem 'pg', '~> 0.21' # for Heroku deployment
   gem 'rails_12factor'
 end
+
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

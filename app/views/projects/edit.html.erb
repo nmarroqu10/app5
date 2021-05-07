@@ -1,6 +1,24 @@
-<h1>Editing Project</h1>
+<div class="card">
 
-<%= render 'form', project: @project %>
+  <div class="card-header">
+    <h2>Editing Project</h2>
+  </div>
 
-<%= link_to 'Show', @project %> |
-<%= link_to 'Back', projects_path %>
+ 
+    <%= render 'form', project: @project %>
+  
+
+ 
+
+  <div class="card-footer">
+    <table sytle="width:35%;">
+      <tbody>
+        <tr>
+          <td><%= link_to 'Show', @project, class: 'btn btn-primary' %></td> 
+          <td><%= link_to 'Back', projects_path, class: 'btn btn-primary' %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
